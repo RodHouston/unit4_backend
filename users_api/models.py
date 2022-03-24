@@ -8,7 +8,7 @@ class User(models.Model):
 
 
 class Home(models.Model):
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.CharField(max_length=32)
     type = models.CharField(max_length=32)
     street = models.CharField(max_length=32)
     city = models.CharField(max_length=32)
