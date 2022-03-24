@@ -8,6 +8,9 @@ class User(models.Model):
     email= models.CharField(max_length=50)
 
 
+
+
+
 class Home(models.Model):
     owner = models.CharField(max_length=32)
     type = models.CharField(max_length=32)
