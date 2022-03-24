@@ -8,13 +8,13 @@ class User(models.Model):
     email= models.CharField(max_length=50)
 
 
-
-
-
 class Home(models.Model):
-    owner = models.CharField(max_length=32)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     type = models.CharField(max_length=32)
     street = models.CharField(max_length=32)
     city = models.CharField(max_length=32)
     state = models.CharField(max_length=32)
+
+class Photo(models.Model):
+    home = models.ForeignKey(Home, on_delete=models.CASCADE)
     photos = ArrayField(models.CharField(max_length=200, default='this', null=True), size=8)
