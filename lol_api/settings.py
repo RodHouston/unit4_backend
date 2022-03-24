@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['localhost', 'fathomless-mesa-16523.herokuapp.com']
 INSTALLED_APPS = [
     'users_api',
     'corsheaders',
+    'rest_framework.authtoken',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -65,7 +66,7 @@ ROOT_URLCONF = 'lol_api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,6 +78,13 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+  'DEFAULT_AUTHENTICATION_CLASSES': (
+      'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 
 WSGI_APPLICATION = 'lol_api.wsgi.application'
 
@@ -137,3 +145,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = '/'
