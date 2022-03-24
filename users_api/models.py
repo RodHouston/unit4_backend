@@ -6,8 +6,8 @@ class User(models.Model):
     name = models.CharField(max_length=32)
     password= models.CharField(max_length=32)
     email= models.CharField(max_length=50)
-    firstName = models.CharField(max_length=32)
-    lastName = models.CharField(max_length=32)
+    firstname = models.CharField(max_length=32)
+    lastname = models.CharField(max_length=32)
 
 
 
