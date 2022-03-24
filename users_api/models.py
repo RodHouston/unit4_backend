@@ -14,4 +14,4 @@ class Home(models.Model):
     street = models.CharField(max_length=32)
     city = models.CharField(max_length=32)
     state = models.CharField(max_length=32)
-    photos = ArrayField(models.CharField(max_length=200))
+    photos = ArrayField(models.CharField(max_length=200, blank=True), size=8)
