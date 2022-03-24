@@ -6,4 +6,6 @@ urlpatterns = [
     path('api/users/<int:pk>', views.UserDetail.as_view(), name='user_detail'), # api/contacts will be routed to the ContactDetail view for handling
     path('api/homes', views.HomeList.as_view(), name='home_list'), # api/contacts will be routed to the ContactList view for handling
     path('api/homes/<int:pk>', views.HomeDetail.as_view(), name='home_detail'), # api/contacts will be routed to the ContactDetail view for handling
+    path('api/photos', views.HomeList.as_view(), name='home_list'), # api/contacts will be routed to the ContactList view for handling
+    path('api/photos/<int:pk>', views.HomeDetail.as_view(), name='home_detail'), # api/contacts will be routed to the ContactDetail view for handling
 ]
