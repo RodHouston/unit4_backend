@@ -18,3 +18,4 @@ class Home(models.Model):
 class Photo(models.Model):
     home = models.ForeignKey(Home, on_delete=models.CASCADE)
     photos = ArrayField(models.CharField(max_length=200, default='this', null=True), size=8)
+ 

@@ -16,4 +16,4 @@ class HomeSerializer(serializers.ModelSerializer): # serializers.ModelSerializer
 class PhotoSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
     class Meta:
         model = Home # tell django which model to use
-        fields = ('id', 'home', 'photos',) # tell djan
+        fields = ('id', 'home', 'photos',) # tell dja
