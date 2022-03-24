@@ -15,6 +15,6 @@ class Home(models.Model):
     state = models.CharField(max_length=32)
     photos =  ArrayField(
         ArrayField(
-            models.CharField( blank=True),
+            models.CharField(blank=True),
             size=8,
         ),
