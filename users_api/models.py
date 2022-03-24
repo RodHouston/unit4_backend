@@ -22,4 +22,4 @@ class Home(models.Model):
 
 class Photo(models.Model):
     home = models.CharField(max_length=32)
-    photos = models.CharField()
+    photos = models.CharField(max_length=500)
