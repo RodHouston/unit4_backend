@@ -8,4 +8,5 @@ urlpatterns = [
     path('api/homes/<int:pk>', views.HomeDetail.as_view(), name='home_detail'), # api/contacts will be routed to the ContactDetail view for handling
     path('api/photos', views.PhotoList.as_view(), name='photo_list'), # api/contacts will be routed to the ContactList view for handling
     path('api/photos/<int:pk>', views.PhotoDetail.as_view(), name='photo_detail'), # api/contacts will be routed to the ContactDetail view for handling
+    path('currentuser/', views.LoggedInUserView.as_view(), name='currentuser'),
 ]
