@@ -18,6 +18,7 @@ class Home(models.Model):
     street = models.CharField(max_length=32)
     city = models.CharField(max_length=32)
     state = models.CharField(max_length=32)
+    coverphoto = models.CharField(max_length=500)
 
 
 class Photo(models.Model):
