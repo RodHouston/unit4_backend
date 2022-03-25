@@ -8,7 +8,7 @@ class User(models.Model):
     email= models.CharField(max_length=50)
     firstname = models.CharField(max_length=32)
     lastname = models.CharField(max_length=32)
-
+    userphoto = models.CharField(max_length=500)
 
 
 

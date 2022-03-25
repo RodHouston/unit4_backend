@@ -4,13 +4,13 @@ from .models import User, Home, Photo
 class UserSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
     class Meta:
         model = User # tell django which model to use
-        fields = ('id', 'name', 'password', 'email', 'firstname', 'lastname',) # tell djan
+        fields = ('id', 'name', 'password', 'email', 'firstname', 'lastname', 'userphoto') # tell djan
 
 
 class HomeSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
     class Meta:
         model = Home # tell django which model to use
-        fields = ('id', 'owner', 'type','street', 'city', 'state',) # tell djan
+        fields = ('id', 'owner', 'type','street', 'city', 'state', 'coverphoto') # tell djan
 
 
 class PhotoSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
