@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ibo$9aw6dwyua%z((afr&1=7r6wb6^dim(j1thbc!)1)x-xv_@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'fathomless-mesa-16523.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'serene-forest-42655.herokuapp.com']
 
 
 # Application definition
