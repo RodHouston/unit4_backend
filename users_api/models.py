@@ -3,12 +3,13 @@ from django.db import models
 
 # Create your models here.
 class User(models.Model):
-    name = models.CharField(max_length=32)
+    username = models.CharField(max_length=32)
     password= models.CharField(max_length=32)
     email= models.CharField(max_length=50)
     firstname = models.CharField(max_length=32)
     lastname = models.CharField(max_length=32)
     userphoto = models.CharField(max_length=500)
+    status = models.CharField(max_length=32)
 
 
 
@@ -19,6 +20,12 @@ class Home(models.Model):
     city = models.CharField(max_length=32)
     state = models.CharField(max_length=32)
     coverphoto = models.CharField(max_length=500)
+    rent = models.CharField(max_length=32)
+    beds = models.CharField(max_length=32)
+    baths = models.CharField(max_length=32)
+    garage = models.CharField(max_length=32)
+    description = models.CharField(max_length=1000)
+
 
 
 class Photo(models.Model):
