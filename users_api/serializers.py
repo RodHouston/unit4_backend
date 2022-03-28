@@ -12,7 +12,7 @@ from rest_framework.authtoken.models import Token
 class UserSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
     class Meta:
         model = User # tell django which model to use
-        fields = ['id', 'username', 'password', 'first_name', 'last_name' ] # tell djan
+        fields = ['id', 'username', 'password', 'first_name', 'last_name', 'email' ] # tell djan
         extra_kwargs = {'password': {'write_only': True, 'required' : True}}
 
     def create(self, validated_data):
