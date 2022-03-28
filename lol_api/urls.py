@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from django.views.generic.base import TemplateView # new
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('', include('users_api.urls')),
+    path('api/', include('users_api.urls')),
     path('admin/', admin.site.urls),
-    path('users/', include('accounts.urls')),
+    path('auth/', obtain_auth_token),
+
+
+    # path('users/', include('accounts.urls')),
     path('homes/', include('accounts.urls')),
     path('photos/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
